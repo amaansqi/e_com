@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Product — Aurora Shop</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner container">
+      <div class="brand">
+        <a href="index.html" class="logo">Aurora<span class="dot">.</span></a>
+      </div>
+
+      <div class="search-wrap">
+        <input id="search" class="search" type="search" placeholder="Search products..." aria-label="Search products">
+      </div>
+
+      <div class="nav-actions">
+        <div class="cart-btn" role="button" aria-label="Cart">
+          <a href="cart.html" class="cart-link">🛒<span id="cart-count" class="cart-count">0</span></a>
+        </div>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main product-page">
+    <a href="index.html" class="back-link">← Back to products</a>
+
+    <section class="product-detail">
+      <div class="product-media">
+        <img id="product-image" src="assets/images/product1.svg" alt="Product image">
+      </div>
+
+      <div class="product-info">
+        <h1 id="product-title">Product Title</h1>
+        <div id="product-rating" class="rating"></div>
+        <p id="product-price" class="price">₹0</p>
+        <p id="product-desc" class="desc">Description</p>
+
+        <div class="quantity">
+          <button id="qty-decrease" class="qty-btn">−</button>
+          <input id="qty-input" class="qty-input" type="number" value="1" min="1">
+          <button id="qty-increase" class="qty-btn">+</button>
+        </div>
+
+        <div class="actions">
+          <button id="add-to-cart" class="btn primary">Add to Cart</button>
+          <a href="cart.html" class="btn outline">View Cart</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" aria-live="assertive" aria-atomic="true"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/cart.js" defer></script>
+  <script src="js/product.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
